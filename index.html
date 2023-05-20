@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Unit Converter</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--font-family-->
+        <!-- Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    </head>
+    <body light-mode="dark">
+        <header>
+            <label class="toggle" >
+                <input class="toggle-checkbox" type="checkbox" checked>
+                <div class="toggle-switch" id="toggle-checkbox"></div>
+                <span class="toggle-label">Toggle</span>
+            </label>
+            <label class="large-label" for="input-el">
+                Metric/Imperial Unit Conversion
+                <input id="input-el" type="text" onclick="this.select()" value="0" size="1" maxlength="6"/>
+            </label>
+            <button type="submit" id="btn-el">Convert</button>
+        </header>
+        <main class="output">
+            <section class="unit-section">
+                <h3 class="unit-title">Length (Meter/Feet)</h3>
+                <p class="unit-value" id="length-section"></p>
+            </section>
+            <section class="unit-section">
+                <h3 class="unit-title">Volume (Liters/Gallons)</h3>     
+                <p class="unit-value" id="volume-section"></p>
+            </section>
+            <section class="unit-section">
+                <h3 class="unit-title">Mass (Kilograms/Pounds)</h3>
+                <p class="unit-value" id="mass-section"></p>
+            </section>
+        </main>
+    </body>
+    <script type="module" src="index.js"></script>
+</html>
