@@ -3,7 +3,7 @@ import unitArray from "./data.js"
 const inputEl = document.getElementById("input-el");
 const convertBtn = document.getElementById("btn-el");
 const app = document.querySelector("body");
-const toggleLabel = document.getElementById("toggle-checkbox")
+const toggleCheckbox = document.getElementById("toggle-checkbox")
 
 let unitValue = 0;
 let temporaryValue = 0;
@@ -42,9 +42,9 @@ function renderUnits(){
   }
 }
 
-toggleLabel.addEventListener("click", function(e) {
+toggleCheckbox.addEventListener("input", function(e) {
   e.preventDefault()
-  if (app.getAttribute("light-mode") == "light") {
+  if (e.target.checked) {
       app.setAttribute("light-mode", "dark");
   } else {
       app.setAttribute("light-mode", "light");
